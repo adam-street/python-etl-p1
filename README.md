@@ -24,7 +24,7 @@
    __There should be 1 database table for each csv file__
    
    ### Hints
-   - __Read__ the ```main.py``` file to see how to run a query withing the existing project structure.
+   - __Read__ the ```main.py``` file to see how to run a query within the existing project structure.
    - New querys you write should be stored in the ```sql.py``` file. __There is an example query you can use as a template__
    - __Use the python documentation__ to learn how you can parse csv files! https://docs.python.org/3/library/csv.html
       
