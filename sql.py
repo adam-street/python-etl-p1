@@ -1,17 +1,6 @@
-test_select = ('''
-    SELECT *
-    FROM public.test_table;
-''')
+# sql.py
 
-test_insert = ('''
-    INSERT INTO public.test_table
-    VALUES(%s);
-''')
-
-create_schema = ('''
-    CREATE SCHEMA IF NOT EXISTS petl1;
-''')
-
+# Create Schema and Table
 create_tables = ('''
     CREATE SCHEMA IF NOT EXISTS petl1;
    
@@ -108,10 +97,7 @@ more_tables = ('''
 ''')
 
 
-
-
-
-
+# Insert Rows
 insert_rows1 = ('''
     INSERT INTO petl1.annual_ticket_sales
     VALUES(%s, %s, %s, %s, %s)
