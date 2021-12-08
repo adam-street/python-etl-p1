@@ -1,3 +1,5 @@
+# pgsql.py
+
 import psycopg2
 from config import pgsql_config
 
@@ -11,7 +13,7 @@ def query(query, values=None):
     else:
         cursor.execute(query)
         # return query results
-        return cursor.fetchall()
+        # return cursor.fetchall()
 
 def connect():
     connection = psycopg2.connect(f"""
