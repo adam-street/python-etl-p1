@@ -1,17 +1,23 @@
 import psycopg2
 from config import pgsql_config
 
-def query(query, values=None):
+
+def query(query_sql, values=None):
     # Connect to your postgres DB
     cursor = connect()
 
     # Execute a query
-    if (values):
-        cursor.execute(query, values)
+    if values:
+        cursor.execute(query_sql, values)
     else:
-        cursor.execute(query)
-        # return query results
-        return cursor.fetchall()
+        cursor.execute(query_sql)
+
+
+def query_select(query_sql):
+    cursor = connect()
+    cursor.execute(query_sql)
+    return cursor.fetchall()
+
 
 def connect():
     connection = psycopg2.connect(f"""
