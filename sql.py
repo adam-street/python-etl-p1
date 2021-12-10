@@ -2,7 +2,7 @@ create_schema = ('''
     create schema IF NOT EXISTS petl1;
 ''')
 
-test_create1 = ('''
+test_create_0 = ('''
     CREATE TABLE if not exists petl1.AnnualTicketSales (
         _Year_ varchar NOT NULL,
         Tickets_Sold varchar,
@@ -12,9 +12,9 @@ test_create1 = ('''
     )
     ''')
 
-test_create2 = ('''
+test_create_1 = ('''
     CREATE TABLE if not exists petl1.HighestGrossers (
-        Year varchar NOT NULL,
+        _Year_ varchar NOT NULL,
         Movie varchar,
         Genre varchar,
         MPAA_Rating varchar,
@@ -25,7 +25,7 @@ test_create2 = ('''
     )
     ''')
 
-test_create3 = ('''
+test_create_2 = ('''
     CREATE TABLE if not exists petl1.PopularCreativeTypes (
         Rank varchar NOT NULL,
         Creative_types varchar,
@@ -36,7 +36,7 @@ test_create3 = ('''
     )
     ''')
 
-test_create4 = ('''
+test_create_3 = ('''
     CREATE TABLE if not exists petl1.TopDistributors (
         Rank varchar NOT NULL,
         distributors varchar,
@@ -47,7 +47,7 @@ test_create4 = ('''
     )
     ''')
 
-test_create5 = ('''
+test_create_4 = ('''
     CREATE TABLE if not exists petl1.TopGenres (
         Rank varchar NOT NULL,
         Genres varchar,
@@ -58,7 +58,7 @@ test_create5 = ('''
     )
     ''')
 
-test_create6 = ('''
+test_create_5 = ('''
     CREATE TABLE if not exists petl1.TopGrossingRatings (
         Rank varchar NOT NULL,
         MPAA_Ratings varchar,
@@ -69,7 +69,7 @@ test_create6 = ('''
     )
     ''')
 
-test_create7 = ('''
+test_create_6 = ('''
     CREATE TABLE if not exists petl1.TopGrossingSources (
         Rank varchar NOT NULL,
         Sources varchar,
@@ -80,7 +80,7 @@ test_create7 = ('''
     )
     ''')
 
-test_create8 = ('''
+test_create_7 = ('''
     CREATE TABLE if not exists petl1.TopProductionMethods (
         Rank varchar NOT NULL,
         Production_Methods varchar,
@@ -91,7 +91,7 @@ test_create8 = ('''
     )
     ''')
 
-test_create9 = ('''
+test_create_8 = ('''
     CREATE TABLE if not exists petl1.WideReleasesCount (
         _Year_ int NOT NULL,
         Warner_Bros int,
@@ -106,47 +106,47 @@ test_create9 = ('''
     )
     ''')
 
-test_insert1 = ('''
+test_insert_0 = ('''
   INSERT INTO petl1.AnnualTicketSales
   VALUES(%s,%s,%s,%s,%s);
 ''')
 
-test_insert2 = ('''
+test_insert_1 = ('''
   INSERT INTO petl1.HighestGrossers
   VALUES(%s,%s,%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert3 = ('''
+test_insert_2 = ('''
   INSERT INTO petl1.PopularCreativeTypes
   VALUES(%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert4 = ('''
+test_insert_3 = ('''
   INSERT INTO petl1.TopDistributors
   VALUES(%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert5 = ('''
+test_insert_4 = ('''
   INSERT INTO petl1.TopGenres
   VALUES(%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert6 = ('''
+test_insert_5 = ('''
   INSERT INTO petl1.TopGrossingRatings
   VALUES(%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert7 = ('''
+test_insert_6 = ('''
   INSERT INTO petl1.TopGrossingSources
   VALUES(%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert8 = ('''
+test_insert_7 = ('''
   INSERT INTO petl1.TopProductionMethods
   VALUES(%s,%s,%s,%s,%s,%s);
 ''')
 
-test_insert9 = ('''
+test_insert_8 = ('''
   INSERT INTO petl1.WideReleasesCount
   VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s);
 ''')
